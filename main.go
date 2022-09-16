@@ -24,8 +24,8 @@ func main() {
 		Addr:         ":9090",
 		Handler:      sm,
 		IdleTimeout:  120 * time.Second,
-		ReadTimeout:  1 * time.Second,
-		WriteTimeout: 1 * time.Second,
+		ReadTimeout:  5 * time.Second,
+		WriteTimeout: 10 * time.Second,
 	}
 	go func() {
 		err := s.ListenAndServe()
